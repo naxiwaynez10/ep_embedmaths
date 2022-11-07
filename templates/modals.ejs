@@ -1,0 +1,34 @@
+<div id="embedMediaModal" class="popup">
+  <div class='popup-content popMedia'>
+    <% e.begin_block("embedMediaPopup"); %>
+        <h1 data-l10n-id="ep_embedmedia.embed">Embed Graph</h1>
+        <div id="modal" data-l10n-id="ep_embedmedia.code"></div>
+        <textarea id="embedMediaSrc" rows="1" cols="70"></textarea>
+        <textarea id="state" rows="1" cols="70"></textarea>
+        <div>
+            <input type="button" class="embedMediaButton" id="doEmbedMedia" value="Insert media" data-l10n-id="ep_embedmedia.insert">
+            <input type="button" class="embedMediaButton" id="cancelEmbedMedia" value="Cancel" data-l10n-id="ep_embedmedia.cancel">
+        </div>
+    <% e.end_block(); %>
+  </div>
+</div>
+<div id="mathsPopup" class="popup">
+  <div class='popup-content maths-content'>
+    <% e.begin_block("embedMediaPopup"); %>
+      <h1 data-l10n-id="ep_embedmedia.formulae">Embed Maths</h1>
+    <div class="AT">
+      <textarea class="maths" type="text" id="mathsInput" placeholder="start typing formulae here..."></textarea>
+      <button id="evalMaths" class="btn btn-primary">Evaluate</button>
+    </div>
+      <div class="result"></div>
+      <div id="modal" data-l10n-id="ep_embedmedia.formulae">
+       
+      </div>
+      <div>
+         <input type="button" class="embedMediaButton" id="doEmbedMaths" value="Insert" data-l10n-id="ep_embedmedia.insert.maths">
+        <input type="button" class="embedMediaButton" id="cancelMaths" value="Cancel"
+          data-l10n-id="ep_embedmedia.cancel">
+      </div>
+      <% e.end_block(); %>
+  </div>
+</div>
