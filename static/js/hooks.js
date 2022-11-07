@@ -50,7 +50,6 @@ exports.aceCreateDomLine = (hookName, args, cb) => {
         console.log(res);
       }
     })
-    //const cleanedCode = exports.cleanEmbedCode(unescape(value));
     return cb([{
       cls: clss.join(' '),
       extraOpenTags: `<div id='media'><span class='embedMedia'><span id="${state}" class='media'><img class="graph" height="100%" width="100%" src="data:image/png;base64,${value}"></span><div class='character'>`,

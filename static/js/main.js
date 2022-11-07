@@ -1602,6 +1602,7 @@ $(document).ready(() => {
       localStorage.removeItem('active-graph');
     }
 
+// Needs to save the file first but its not working. It bypass before request is done correctly
 
     // $.ajax({
     //     url: API,
@@ -1612,28 +1613,7 @@ $(document).ready(() => {
     //     }
     // });
    console.log(parameters);
-    // //$("#embedMediaSrc").empty();
-    // if($('img.active-graph')){
-    //   parameters.ggbbase64 = $('img.active-graph').attr('id');
-    // }
-    //parameters.appletOnLoad = (api)=>{
 
-          
-    //   var str = ggbApplet.getPNGBase64(1, true, 72); 
-    //     //ggbApplet.getBase64(function(b){
-    //   $("#embedMediaSrc").val(str);
-      
-    //   function updateListener(objName) {
-    //     // strVal = api.getValueString(objName);
-    //     var str = ggbApplet.getPNGBase64(1, true, 72); 
-    //     //ggbApplet.getBase64(function(b){
-    //       $("#embedMediaSrc").val(str);
-    //       // console.log(str);
-    //     //});
-    //}
-
-    //   api.registerUpdateListener(updateListener);
-    // }
       applet = new GGBApplet(parameters, true);
       applet.inject('modal');
 //  when used with Math Apps Bundle, uncomment this:
@@ -1675,7 +1655,7 @@ $(document).ready(() => {
      ggbApplet && ggbApplet.remove();
   });
 
-
+// This ffunction is suppose to create an image out of base64 string but its not working as expected
  function dataURLtoFile(dataurl, filename) {
  
         // var arr = dataurl.split(',');
